@@ -18,4 +18,3 @@ speechrecognition
 meteostat
 google-generativeai
 tensorflow
-pickle
