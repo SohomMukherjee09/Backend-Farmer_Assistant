@@ -1,0 +1,112 @@
+[ 2025-04-20 13:15:16,104 ] Backend - INFO - DEVELOPMENT_MODE: true
+[ 2025-04-20 13:15:16,104 ] Backend - INFO - GOOGLE_API_KEY: set
+[ 2025-04-20 13:15:16,104 ] Backend - INFO - OPENWEATHER_API_KEY: set
+[ 2025-04-20 13:18:29,999 ] Backend - INFO - Test endpoint called with request: {}
+[ 2025-04-20 13:18:34,696 ] Backend - INFO - Received request: {'text': '', 'userInput': ''}
+[ 2025-04-20 13:18:34,696 ] Backend - INFO - Processing request for user_id: dev-user
+[ 2025-04-20 13:18:34,696 ] Backend - ERROR - No input text provided
+[ 2025-04-20 13:18:34,696 ] Backend - ERROR - HTTP error: No input text provided
+[ 2025-04-20 13:18:34,696 ] Backend - INFO - Received request: {'text': 'What crops are suitable for sandy soil?', 'userInput': ''}
+[ 2025-04-20 13:18:34,696 ] Backend - INFO - Processing request for user_id: dev-user
+[ 2025-04-20 13:18:36,077 ] Backend - INFO - Detected language: en
+[ 2025-04-20 13:19:13,086 ] Backend - INFO - Test endpoint called with request: {}
+[ 2025-04-20 13:19:17,666 ] Backend - INFO - Received request: {'text': '', 'userInput': ''}
+[ 2025-04-20 13:19:17,666 ] Backend - INFO - Processing request for user_id: dev-user
+[ 2025-04-20 13:19:17,666 ] Backend - ERROR - No input text provided
+[ 2025-04-20 13:19:17,668 ] Backend - ERROR - HTTP error: No input text provided
+[ 2025-04-20 13:19:17,674 ] Backend - INFO - Received request: {'text': 'hello', 'userInput': ''}
+[ 2025-04-20 13:19:17,674 ] Backend - INFO - Processing request for user_id: dev-user
+[ 2025-04-20 13:19:18,340 ] Backend - INFO - Detected language: fi
+[ 2025-04-20 13:19:38,083 ] Backend - INFO - Received request: {'text': '', 'userInput': ''}
+[ 2025-04-20 13:19:38,083 ] Backend - INFO - Processing request for user_id: dev-user
+[ 2025-04-20 13:19:38,083 ] Backend - ERROR - No input text provided
+[ 2025-04-20 13:19:38,083 ] Backend - ERROR - HTTP error: No input text provided
+[ 2025-04-20 13:19:38,089 ] Backend - INFO - Received request: {'text': 'what is your name', 'userInput': ''}
+[ 2025-04-20 13:19:38,089 ] Backend - INFO - Processing request for user_id: dev-user
+[ 2025-04-20 13:19:38,722 ] Backend - INFO - Detected language: en
+[ 2025-04-20 13:19:54,975 ] Backend - INFO - Received request: {'text': '', 'userInput': ''}
+[ 2025-04-20 13:19:54,975 ] Backend - INFO - Processing request for user_id: dev-user
+[ 2025-04-20 13:19:54,975 ] Backend - ERROR - No input text provided
+[ 2025-04-20 13:19:54,975 ] Backend - ERROR - HTTP error: No input text provided
+[ 2025-04-20 13:19:54,988 ] Backend - INFO - Received request: {'text': 'how to grow apple', 'userInput': ''}
+[ 2025-04-20 13:19:54,988 ] Backend - INFO - Processing request for user_id: dev-user
+[ 2025-04-20 13:19:55,304 ] Backend - INFO - Detected language: en
+[ 2025-04-20 13:20:09,414 ] Backend - INFO - Received request: {'text': '', 'userInput': ''}
+[ 2025-04-20 13:20:09,414 ] Backend - INFO - Processing request for user_id: dev-user
+[ 2025-04-20 13:20:09,414 ] Backend - ERROR - No input text provided
+[ 2025-04-20 13:20:09,414 ] Backend - ERROR - HTTP error: No input text provided
+[ 2025-04-20 13:20:09,419 ] Backend - INFO - Received request: {'text': 'ok', 'userInput': ''}
+[ 2025-04-20 13:20:09,419 ] Backend - INFO - Processing request for user_id: dev-user
+[ 2025-04-20 13:20:09,736 ] Backend - INFO - Detected language: sk
+[ 2025-04-20 13:20:30,213 ] Backend - INFO - Received request: {'text': '', 'userInput': ''}
+[ 2025-04-20 13:20:30,213 ] Backend - INFO - Processing request for user_id: dev-user
+[ 2025-04-20 13:20:30,213 ] Backend - ERROR - No input text provided
+[ 2025-04-20 13:20:30,213 ] Backend - ERROR - HTTP error: No input text provided
+[ 2025-04-20 13:20:30,217 ] Backend - INFO - Received request: {'text': 'how to grow peepal\n', 'userInput': ''}
+[ 2025-04-20 13:20:30,217 ] Backend - INFO - Processing request for user_id: dev-user
+[ 2025-04-20 13:20:30,868 ] Backend - INFO - Detected language: en
+[ 2025-04-20 13:34:05,424 ] Backend - INFO - DEVELOPMENT_MODE: true
+[ 2025-04-20 13:34:05,424 ] Backend - INFO - GOOGLE_API_KEY: set
+[ 2025-04-20 13:34:05,424 ] Backend - INFO - OPENWEATHER_API_KEY: set
+[ 2025-04-20 13:34:51,353 ] Backend - INFO - Test endpoint called with request: {}
+[ 2025-04-20 13:34:55,773 ] Backend - INFO - Received request: {'text': '', 'userInput': ''}
+[ 2025-04-20 13:34:55,773 ] Backend - INFO - Processing request for user_id: dev-user
+[ 2025-04-20 13:34:55,773 ] Backend - ERROR - No input text provided
+[ 2025-04-20 13:34:55,773 ] Backend - ERROR - HTTP error: No input text provided
+[ 2025-04-20 13:34:55,776 ] Backend - INFO - Received request: {'text': 'hello', 'userInput': ''}
+[ 2025-04-20 13:34:55,776 ] Backend - INFO - Processing request for user_id: dev-user
+[ 2025-04-20 13:34:56,918 ] Backend - INFO - Detected language: fi
+[ 2025-04-20 13:35:10,254 ] Backend - INFO - Received request: {'text': '', 'userInput': ''}
+[ 2025-04-20 13:35:10,254 ] Backend - INFO - Processing request for user_id: dev-user
+[ 2025-04-20 13:35:10,254 ] Backend - ERROR - No input text provided
+[ 2025-04-20 13:35:10,254 ] Backend - ERROR - HTTP error: No input text provided
+[ 2025-04-20 13:35:10,259 ] Backend - INFO - Received request: {'text': 'how to grow pwwpal tree\n', 'userInput': ''}
+[ 2025-04-20 13:35:10,259 ] Backend - INFO - Processing request for user_id: dev-user
+[ 2025-04-20 13:35:10,684 ] Backend - INFO - Detected language: en
+[ 2025-04-20 13:44:28,171 ] Backend - INFO - Test endpoint called with request: {}
+[ 2025-04-20 13:51:05,677 ] Backend - INFO - DEVELOPMENT_MODE: true
+[ 2025-04-20 13:51:05,677 ] Backend - INFO - GOOGLE_API_KEY: set
+[ 2025-04-20 13:51:05,677 ] Backend - INFO - OPENWEATHER_API_KEY: set
+[ 2025-04-20 13:51:21,181 ] Backend - INFO - DEVELOPMENT_MODE: true
+[ 2025-04-20 13:51:21,181 ] Backend - INFO - GOOGLE_API_KEY: set
+[ 2025-04-20 13:51:21,181 ] Backend - INFO - OPENWEATHER_API_KEY: set
+[ 2025-04-20 13:56:32,041 ] Backend - INFO - DEVELOPMENT_MODE: true
+[ 2025-04-20 13:56:32,041 ] Backend - INFO - GOOGLE_API_KEY: set
+[ 2025-04-20 13:56:32,041 ] Backend - INFO - OPENWEATHER_API_KEY: set
+[ 2025-04-20 13:56:32,129 ] Backend - ERROR - Failed to load TensorFlow model: File not found: filepath=models/plant_disease_recog_model_pwp (1).keras. Please ensure the file is an accessible `.keras` zip file.
+[ 2025-04-20 13:58:21,294 ] Backend - INFO - DEVELOPMENT_MODE: true
+[ 2025-04-20 13:58:21,294 ] Backend - INFO - GOOGLE_API_KEY: set
+[ 2025-04-20 13:58:21,294 ] Backend - INFO - OPENWEATHER_API_KEY: set
+[ 2025-04-20 13:58:26,100 ] Backend - INFO - TensorFlow model loaded successfully from Models/plant_disease_recog_model_pwp (1).keras
+[ 2025-04-20 13:58:26,100 ] Backend - ERROR - Failed to load plant_disease.json: [Errno 2] No such file or directory: 'plant_disease.json'
+[ 2025-04-20 14:02:29,720 ] Backend - INFO - DEVELOPMENT_MODE: true
+[ 2025-04-20 14:02:29,720 ] Backend - INFO - GOOGLE_API_KEY: set
+[ 2025-04-20 14:02:29,720 ] Backend - INFO - OPENWEATHER_API_KEY: set
+[ 2025-04-20 14:02:34,681 ] Backend - INFO - TensorFlow model loaded successfully from Models/plant_disease_recog_model_pwp (1).keras
+[ 2025-04-20 14:02:34,681 ] Backend - INFO - Plant disease JSON loaded successfully
+[ 2025-04-20 14:02:55,054 ] Backend - INFO - Test endpoint called with request: {}
+[ 2025-04-20 14:02:56,526 ] Backend - INFO - Received request: {'text': '', 'userInput': ''}
+[ 2025-04-20 14:02:56,527 ] Backend - INFO - Processing request for user_id: dev-user
+[ 2025-04-20 14:02:56,527 ] Backend - ERROR - No input text provided
+[ 2025-04-20 14:02:56,527 ] Backend - ERROR - HTTP error: No input text provided
+[ 2025-04-20 14:02:56,531 ] Backend - INFO - Received request: {'text': 'What crops are suitable for sandy soil?', 'userInput': ''}
+[ 2025-04-20 14:02:56,531 ] Backend - INFO - Processing request for user_id: dev-user
+[ 2025-04-20 14:02:57,632 ] Backend - INFO - Detected language: en
+[ 2025-04-20 14:13:28,138 ] Backend - INFO - DEVELOPMENT_MODE: true
+[ 2025-04-20 14:13:28,138 ] Backend - INFO - GOOGLE_API_KEY: set
+[ 2025-04-20 14:13:28,138 ] Backend - INFO - OPENWEATHER_API_KEY: set
+[ 2025-04-20 14:13:32,613 ] Backend - INFO - TensorFlow model loaded successfully from Models/plant_disease_recog_model_pwp (1).keras
+[ 2025-04-20 14:13:32,615 ] Backend - INFO - Plant disease JSON loaded successfully
+[ 2025-04-20 14:13:43,263 ] Backend - INFO - DEVELOPMENT_MODE: true
+[ 2025-04-20 14:13:43,263 ] Backend - INFO - GOOGLE_API_KEY: set
+[ 2025-04-20 14:13:43,263 ] Backend - INFO - OPENWEATHER_API_KEY: set
+[ 2025-04-20 14:13:47,970 ] Backend - INFO - TensorFlow model loaded successfully from Models/plant_disease_recog_model_pwp (1).keras
+[ 2025-04-20 14:13:47,978 ] Backend - INFO - Plant disease JSON loaded successfully
+[ 2025-04-20 14:58:47,256 ] Backend - INFO - Test endpoint called with request: {}
+[ 2025-04-20 14:58:49,506 ] Backend - INFO - Received request: {'text': '', 'userInput': ''}
+[ 2025-04-20 14:58:49,506 ] Backend - INFO - Processing request for user_id: dev-user
+[ 2025-04-20 14:58:49,506 ] Backend - ERROR - No input text provided
+[ 2025-04-20 14:58:49,506 ] Backend - ERROR - HTTP error: No input text provided
+[ 2025-04-20 14:58:49,511 ] Backend - INFO - Received request: {'text': 'What crops are suitable for sandy soil?', 'userInput': ''}
+[ 2025-04-20 14:58:49,511 ] Backend - INFO - Processing request for user_id: dev-user
+[ 2025-04-20 14:58:53,699 ] Backend - INFO - Detected language: en
