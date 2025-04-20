@@ -95,18 +95,13 @@ async def verify_token(authorization: Optional[str] = Header(None)):
 
 app = FastAPI()
 
-# Updated CORS configuration
+# Updated CORS configuration to allow all origins
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://localhost:8081",
-        "http://127.0.0.1:8081",
-        # Add your production frontend domain here, e.g., "https://your-frontend-domain.com"
-    ],
+    allow_origins=["*"],  # Allow requests from any origin
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["*"],  # Allow all HTTP methods (GET, POST, etc.)
+    allow_headers=["*"],  # Allow all headers
 )
 
 # Root endpoint
@@ -555,12 +550,10 @@ Provide the following in a structured format:
 8. Impact on Crop Yield: How this disease affects productivity.
 
 Use layman-friendly language for farmers with no technical background.
-under each point DO NOT PROVIDE FURTHER POINTS GIVE PARAGRAPHS INSTEAD
-""".format(predicted_label)
-
+"""
         try:
             response = model.generate_content([
-                {"text": prompt},
+                {"text": prompt.format(predicted_label)},
                 {"mime_type": "image/png", "data": image_bytes.read()}
             ])
             diagnosis_text = response.text
@@ -659,4 +652,5 @@ async def get_audio(filename: str):
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 8000))
     logger.info(f"Starting Uvicorn on host=0.0.0.0, port={port}")
+    print(f"Starting Uvicorn on host=0.0.0.0, port={port}")  # For Render logs
     uvicorn.run("Backend:app", host="0.0.0.0", port=port, reload=os.getenv("DEVELOPMENT_MODE") == "true")
