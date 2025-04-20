@@ -3,6 +3,7 @@ import logging
 import pickle
 import speech_recognition as sr
 from fastapi import FastAPI, UploadFile, File, HTTPException, Depends, status, Form, Header
+from starlette.responses import FileResponse  # Correct import for FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from pydantic import BaseModel
@@ -52,10 +53,19 @@ logger = logging.getLogger(__name__)
 logger.info(f"DEVELOPMENT_MODE: {os.getenv('DEVELOPMENT_MODE')}")
 logger.info(f"GOOGLE_API_KEY: {'set' if os.getenv('GOOGLE_API_KEY') else 'not set'}")
 logger.info(f"OPENWEATHER_API_KEY: {'set' if os.getenv('OPENWEATHER_API_KEY') else 'not set'}")
+logger.info(f"PORT: {os.getenv('PORT', '8000')}")
 
-# Initialize Firebase Admin - Disabled for development
-# cred = credentials.Certificate("path/to/your/serviceAccountKey.json")
-# firebase_admin.initialize_app(cred)
+# Initialize Firebase Admin
+firebase_creds = os.getenv("FIREBASE_CREDENTIALS")
+if firebase_creds:
+    try:
+        cred = credentials.Certificate(json.loads(firebase_creds))
+        firebase_admin.initialize_app(cred)
+        logger.info("Firebase Admin initialized successfully")
+    except Exception as e:
+        logger.error(f"Failed to initialize Firebase Admin: {str(e)}")
+else:
+    logger.warning("Firebase credentials not found, running without Firebase authentication")
 
 security = HTTPBearer()
 
@@ -85,17 +95,29 @@ async def verify_token(authorization: Optional[str] = Header(None)):
 
 app = FastAPI()
 
+# Updated CORS configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:8081", "http://127.0.0.1:8081", "*"],
+    allow_origins=[
+        "http://localhost:5173",
+        "http://localhost:8081",
+        "http://127.0.0.1:8081",
+        # Add your production frontend domain here, e.g., "https://your-frontend-domain.com"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+# Root endpoint
+@app.get("/")
+async def root():
+    logger.info("Root endpoint accessed")
+    return {"message": "Welcome to the Agricultural AI API"}
+
 # Google Generative AI model setup
-OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY").strip('"')
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY").strip('"')
+OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY", "").strip('"')
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "").strip('"')
 genai.configure(api_key=GOOGLE_API_KEY)
 llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", google_api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel("gemini-1.5-flash")
@@ -129,7 +151,7 @@ labels = [
 # Load plant disease JSON
 try:
     with open("plant_disease.json", 'r') as file:
-        plant_disease = json.load(file)     
+        plant_disease = json.load(file)
     logger.info("Plant disease JSON loaded successfully")
 except Exception as e:
     logger.error(f"Failed to load plant_disease.json: {str(e)}")
@@ -467,7 +489,6 @@ Be detailed and use layman-friendly language so that even a farmer with no techn
         logger.error(f"Image classification failed: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Image classification failed: {str(e)}")
 
-# New endpoint for image-based plant disease classification
 @app.post("/upload-image")
 async def upload_image(
     image: UploadFile = File(...),
@@ -534,6 +555,7 @@ Provide the following in a structured format:
 8. Impact on Crop Yield: How this disease affects productivity.
 
 Use layman-friendly language for farmers with no technical background.
+under each point DO NOT PROVIDE FURTHER POINTS GIVE PARAGRAPHS INSTEAD
 """.format(predicted_label)
 
         try:
@@ -635,4 +657,6 @@ async def get_audio(filename: str):
     return FileResponse(file_path)
 
 if __name__ == "__main__":
-    uvicorn.run("Backend:app", host="0.0.0.0", port=8000, reload=True)
+    port = int(os.getenv("PORT", 8000))
+    logger.info(f"Starting Uvicorn on host=0.0.0.0, port={port}")
+    uvicorn.run("Backend:app", host="0.0.0.0", port=port, reload=os.getenv("DEVELOPMENT_MODE") == "true")
