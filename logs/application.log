@@ -110,3 +110,33 @@
 [ 2025-04-20 14:58:49,511 ] Backend - INFO - Received request: {'text': 'What crops are suitable for sandy soil?', 'userInput': ''}
 [ 2025-04-20 14:58:49,511 ] Backend - INFO - Processing request for user_id: dev-user
 [ 2025-04-20 14:58:53,699 ] Backend - INFO - Detected language: en
+[ 2025-04-20 20:02:23,705 ] Backend - INFO - DEVELOPMENT_MODE: true
+[ 2025-04-20 20:02:23,706 ] Backend - INFO - GOOGLE_API_KEY: set
+[ 2025-04-20 20:02:23,706 ] Backend - INFO - OPENWEATHER_API_KEY: set
+[ 2025-04-20 20:02:23,796 ] Backend - INFO - Pickled TensorFlow model loaded successfully from Models/model.pkl
+[ 2025-04-20 20:02:23,810 ] Backend - INFO - Plant disease JSON loaded successfully
+[ 2025-04-20 20:13:49,944 ] Backend - INFO - Test endpoint called with request: {}
+[ 2025-04-20 20:14:06,089 ] Backend - INFO - Test endpoint called with request: {}
+[ 2025-04-20 20:14:13,285 ] Backend - INFO - Received request: {'text': '', 'userInput': ''}
+[ 2025-04-20 20:14:13,285 ] Backend - INFO - Processing request for user_id: dev-user
+[ 2025-04-20 20:14:13,285 ] Backend - ERROR - No input text provided
+[ 2025-04-20 20:14:13,285 ] Backend - ERROR - HTTP error: No input text provided
+[ 2025-04-20 20:14:13,289 ] Backend - INFO - Received request: {'text': 'hello', 'userInput': ''}
+[ 2025-04-20 20:14:13,289 ] Backend - INFO - Processing request for user_id: dev-user
+[ 2025-04-20 20:14:14,685 ] Backend - INFO - Detected language: fi
+[ 2025-04-20 20:14:28,658 ] Backend - INFO - Test endpoint called with request: {}
+[ 2025-04-20 20:20:26,256 ] Backend - INFO - DEVELOPMENT_MODE: true
+[ 2025-04-20 20:20:26,256 ] Backend - INFO - GOOGLE_API_KEY: set
+[ 2025-04-20 20:20:26,256 ] Backend - INFO - OPENWEATHER_API_KEY: set
+[ 2025-04-20 20:20:26,366 ] Backend - INFO - Pickled TensorFlow model loaded successfully from Models/model.pkl
+[ 2025-04-20 20:20:26,366 ] Backend - INFO - Plant disease JSON loaded successfully
+[ 2025-04-20 20:43:50,540 ] Backend - INFO - DEVELOPMENT_MODE: true
+[ 2025-04-20 20:43:50,541 ] Backend - INFO - GOOGLE_API_KEY: set
+[ 2025-04-20 20:43:50,541 ] Backend - INFO - OPENWEATHER_API_KEY: set
+[ 2025-04-20 20:43:50,586 ] Backend - INFO - Pickled TensorFlow model loaded successfully from Models/model.pkl
+[ 2025-04-20 20:43:50,586 ] Backend - INFO - Plant disease JSON loaded successfully
+[ 2025-04-20 20:46:49,571 ] Backend - INFO - DEVELOPMENT_MODE: true
+[ 2025-04-20 20:46:49,571 ] Backend - INFO - GOOGLE_API_KEY: set
+[ 2025-04-20 20:46:49,571 ] Backend - INFO - OPENWEATHER_API_KEY: set
+[ 2025-04-20 20:46:49,631 ] Backend - INFO - Pickled TensorFlow model loaded successfully from Models/model.pkl
+[ 2025-04-20 20:46:49,631 ] Backend - INFO - Plant disease JSON loaded successfully
